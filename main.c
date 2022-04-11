@@ -45,7 +45,8 @@ char **argv;
   myHint.height = 250;
   myHint.flags = PPosition | PSize;
 
-  myWindow = XCreateSimpleWindow(myDisplay, DefaultRootWindow(myDisplay), myHint.x, myHint.y, myHint.width, myHint.base_height, 5, myForeground, myBackground);
+  myWindow = XCreateSimpleWindow(myDisplay, DefaultRootWindow(myDisplay), myHint.x, myHint.y,
+                                 myHint.width, myHint.height, 5, myForeground, myBackground);
 
   /* window manager properties (yes, use of StdProp is obsolete) */
   XSetStandardProperties(myDisplay, myWindow, hello, hello,
