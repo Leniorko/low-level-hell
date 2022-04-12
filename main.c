@@ -84,9 +84,9 @@ char **argv;
                          50, 50,
                          hello, strlen(hello));
       break;
-      // case MappingNotify:
-      //   /* Modifier key was up/down. */
-      //   XRefreshKeyboardMapping(&myEvent);
+    case MappingNotify:
+      /* Modifier key was up/down. */
+      XRefreshKeyboardMapping(&myEvent);
       break;
     case ButtonPress:
       /* Mouse button was pressed. */
@@ -96,12 +96,12 @@ char **argv;
                        myEvent.xbutton.x, myEvent.xbutton.y,
                        hi, strlen(hi));
       break;
-      // case KeyPress:
-      //   /* Key input. */
-      //   i = XLookupString(&myEvent, text, 10, &myKey, 0);
-      //   if (i == 1 && text[0] == 'q')
-      //     done = 1;
-      //   break;
+    case KeyPress:
+      /* Key input. */
+      i = XLookupString(&myEvent, text, 10, &myKey, 0);
+      if (i == 1 && text[0] == 'q')
+        done = 1;
+      break;
     }
   }
 
