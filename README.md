@@ -8,3 +8,7 @@ I'm following handmadehero project from [this youtube channel](https://www.youtu
 
 `.vscode` folder contains debugger options for launch main.c
 This is the only purpose for now
+
+---
+
+I know that warnings are common in programming. But I'll try and make this project without any warning. Maybe it will be more explicit code, but I'm okay with this.

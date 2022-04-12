@@ -86,7 +86,7 @@ char **argv;
       break;
     case MappingNotify:
       /* Modifier key was up/down. */
-      XRefreshKeyboardMapping(&myEvent);
+      XRefreshKeyboardMapping(&myEvent.xmapping);
       break;
     case ButtonPress:
       /* Mouse button was pressed. */
@@ -98,7 +98,7 @@ char **argv;
       break;
     case KeyPress:
       /* Key input. */
-      i = XLookupString(&myEvent, text, 10, &myKey, 0);
+      i = XLookupString(&myEvent.xkey, text, 10, &myKey, 0);
       if (i == 1 && text[0] == 'q')
         done = 1;
       break;
